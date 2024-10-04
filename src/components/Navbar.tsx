@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import logo from '@/asset/logo.png'
 import Image from "next/image";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "./ui/sheet";
+import { ModeToggle } from "./ThemeCompo";
 
 const Navbar = () => {
     return (
@@ -36,6 +37,8 @@ const Navbar = () => {
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
                         <Image src={logo} width={30} height={30} alt="users" />
                     </Button>
+                    
+                       <ModeToggle/>
 
 
 

@@ -8,8 +8,6 @@ const SearchFeild = () => {
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
       } = useForm()
 
       const onSubmit:SubmitHandler<FieldValues> = async (data)=>{
