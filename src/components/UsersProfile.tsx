@@ -19,7 +19,7 @@ const UsersProfile = () => {
                             <AvatarFallback className="text-3xl font-extrabold bg-black text-white">A</AvatarFallback>
                         </Avatar>
 
-                        <CardTitle className="text-5xl">Ashraful Islam</CardTitle>
+                        <CardTitle className="text-3xl font-bold">Ashraful Islam</CardTitle>
                         <CardDescription className="flex gap-2 items-center"><CiCalendarDate className="w-5 h-5 " /> Joined 2024</CardDescription>
                         <CardDescription className="flex gap-2 items-center"><MdOutlineMailOutline className="w-5 h-5 " />
                         no@gmail.com</CardDescription>
@@ -31,11 +31,11 @@ const UsersProfile = () => {
         <TabsTrigger value="following">Following</TabsTrigger>
         <TabsTrigger value="followres">Followres</TabsTrigger>
       </TabsList>
-      <TabsContent value="following">
+      <TabsContent value="following" defaultChecked>
        dfgdfgfd
       </TabsContent>
       <TabsContent value="followres">
-       dfgdfgfd
+       2342342fdf
       </TabsContent>
       
     </Tabs>

@@ -2,7 +2,7 @@
 const page = () => {
     return (
         <div>
-            News Feed
+          Page Contact  
         </div>
     );
 };
