@@ -3,6 +3,8 @@ import logo from "@/asset/logo.png"
 import Image from "next/image";
 import { BiUpvote } from "react-icons/bi";
 import AddCooments from "./Comment/AddCooments";
+import { Separator } from "./ui/separator";
+import ViewallComment from "./Comment/ViewallComment";
 const PostDetail = () => {
     return (
         <div className="w-full max-w-3xl container mx-auto">
@@ -29,7 +31,7 @@ const PostDetail = () => {
             <div className="py-1">
                 <p className="text-sm font-bold text-gray-400"> 21 June 2024</p>
             </div>
-           
+
             <div className="">
                 Node.js is known as a blazingly fast server platform with its revolutionary single-thread architecture, utilizing server resources more efficiently. But is it actually possible to achieve that amazing performance using only one thread? The answer might surprise you.
 
@@ -73,33 +75,46 @@ const PostDetail = () => {
                 I/O’s can significantly slow down a program. The thread remains blocked, and no further operations will be executed until the I/O is completed.
 
 
-                Create More Threads! 
+                Create More Threads!
                 Okay, why not just spawn more threads inside the program and handle each request separately? Well, it seems like a good idea. Now, each client request has its own thread, and the server can handle multiple requests simultaneously.
 
 
             </div>
-            <div className="flex gap-3 items-center justify-evenly py-3 h-24 ">
-                        <div className="flex items-center gap-3">
-                           
-                           <BiUpvote className="w-6 h-6 " />     <span>200</span>
-                           
-                        </div>
-                        <div className="flex gap-1 items-center">
+            <Separator className="my-4" />
+            <div className="flex gap-3 items-center justify-start py-3 h-24 ">
+                <div className="flex items-center gap-3">
 
-                       <h1 className="font-bold">Top comments</h1>
-                            <span>20</span>
+                    <BiUpvote className="w-6 h-6 " />     <span>200</span>
 
-                        </div>
+                </div>
+                <div className="flex gap-1 items-center">
 
-                    </div>
+                    <h1 className="font-bold">Top comments</h1>
+                    <span>20</span>
 
+                </div>
 
-<div>
-    <AddCooments/>
-</div>
+            </div>
+            <Separator className="my-4" />
+
+            <div>
+                <AddCooments />
+            </div>
+
+            <div>
+                <h1 className="font-bold pb-2">All comments</h1>
+                <div className=" grid grid-cols-1 gap-3 ">
+                    {[...Array(10)].map(() => (
+                        // eslint-disable-next-line react/jsx-key
+                        <ViewallComment />
+                    ))
+
+                    }
+                </div>
+            </div>
 
         </div>
-    ); 
+    );
 };
 
 export default PostDetail;
