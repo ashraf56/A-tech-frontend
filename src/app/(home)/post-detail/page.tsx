@@ -1,8 +1,9 @@
+import PostDetail from "@/components/PostDetail";
 
 const page = () => {
     return (
-        <div>
-           sfg 
+        <div className="mx-auto">
+           <PostDetail/>
         </div>
     );
 };
