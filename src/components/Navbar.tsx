@@ -5,6 +5,8 @@ import logo from '@/asset/logo.png'
 import Image from "next/image";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { ModeToggle } from "./ThemeCompo";
+import { DropMenu } from "./DropdownMenu/DropMenu";
+import { LayoutGridIcon } from "lucide-react";
 
 const Navbar = () => {
     return (
@@ -25,6 +27,20 @@ const Navbar = () => {
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
                         <Link href={'/'}
                         >
+                            Contact 
+                        </Link>
+                    </Button>
+
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
+                            About us
+                        </Link>
+                    </Button>
+
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
                             Write
                         </Link>
                     </Button>
@@ -34,11 +50,11 @@ const Navbar = () => {
                             Login
                         </Link>
                     </Button>
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Image src={logo} width={30} height={30} alt="users" />
-                    </Button>
+                    <DropMenu/>
                     
-                       <ModeToggle/>
+                     <div className="hidden lg:block">
+                     <ModeToggle/>
+                     </div>
 
 
 
@@ -52,13 +68,55 @@ const Navbar = () => {
                 <Sheet>
                     <SheetTrigger asChild >
                         <Button variant="outline" className="block lg:hidden ml-auto">
-                            fg
+                            <LayoutGridIcon className="w-5 h-5"/>
                         </Button>
                     </SheetTrigger>
                     <SheetContent>
                         <SheetHeader>
                             <SheetDescription>
                                 <nav className="ml-auto flex flex-col gap-6 mt-5">
+
+
+                                <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
+                            Contact 
+                        </Link>
+                    </Button>
+
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
+                            About us
+                        </Link>
+                    </Button>
+
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
+                            Write
+                        </Link>
+                    </Button>
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
+                            Login
+                        </Link>
+                    </Button>
+                   
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/'}
+                        >
+                            Dashboard
+                        </Link>
+                    </Button>
+                   
+                    
+                   
+                     <ModeToggle/>
+                    
+
+
 
                                 </nav>
 
