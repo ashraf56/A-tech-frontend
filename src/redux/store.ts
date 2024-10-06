@@ -7,7 +7,7 @@ import {
     PURGE,
     REGISTER,
     persistReducer,
-    persistStore
+  
 } from "redux-persist";
 import storage from 'redux-persist/lib/storage';
 import { baseApi } from './baseApi/baseApi';
@@ -39,6 +39,5 @@ export type AppStore = ReturnType<typeof makeStore>
 export type RootState = ReturnType<AppStore['getState']>
 export type AppDispatch = AppStore['dispatch']
 
-const store = makeStore()
 
-export const persistor = persistStore(store)
+

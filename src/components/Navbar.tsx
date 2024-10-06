@@ -5,9 +5,8 @@ import logo from '@/asset/logo.png'
 import Image from "next/image";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { ModeToggle } from "./ThemeCompo";
-import { DropMenu } from "./DropdownMenu/DropMenu";
 import { LayoutGridIcon } from "lucide-react";
-import { CreatePost } from "./homepagecompo/Post/CreatePost";
+import NavbarUtills from "./NavbarUtills";
 
 const Navbar = () => {
     
@@ -40,14 +39,9 @@ const Navbar = () => {
                         </Link>
                     </Button>
 
-                    <CreatePost/>
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/login'}
-                        >
-                            Login
-                        </Link>
-                    </Button>
-                    <DropMenu/>
+                    <div className="block">
+                    <NavbarUtills/>
+                    </div>
                     
                      <div className="hidden lg:block">
                      <ModeToggle/>
@@ -88,25 +82,6 @@ const Navbar = () => {
                         </Link>
                     </Button>
 
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
-                        >
-                            Write
-                        </Link>
-                    </Button>
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
-                        >
-                            Login
-                        </Link>
-                    </Button>
-                   
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
-                        >
-                            Dashboard
-                        </Link>
-                    </Button>
                    
                     
                    
