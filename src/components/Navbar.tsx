@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from
 import { ModeToggle } from "./ThemeCompo";
 import { DropMenu } from "./DropdownMenu/DropMenu";
 import { LayoutGridIcon } from "lucide-react";
+import { CreatePost } from "./homepagecompo/Post/CreatePost";
 
 const Navbar = () => {
     return (
@@ -38,12 +39,7 @@ const Navbar = () => {
                         </Link>
                     </Button>
 
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
-                        >
-                            Write
-                        </Link>
-                    </Button>
+                    <CreatePost/>
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
                         <Link href={'/'}
                         >
