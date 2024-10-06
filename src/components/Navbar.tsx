@@ -10,6 +10,7 @@ import { LayoutGridIcon } from "lucide-react";
 import { CreatePost } from "./homepagecompo/Post/CreatePost";
 
 const Navbar = () => {
+    
     return (
         <div>
             <header className="flex h-14 w-full shrink-0 items-center sticky top-0 z-30 px-4 md:px-6 border-b-2">
@@ -41,7 +42,7 @@ const Navbar = () => {
 
                     <CreatePost/>
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
+                        <Link href={'/login'}
                         >
                             Login
                         </Link>
