@@ -1,5 +1,5 @@
 'use client'
-import {  useAppSelector } from "@/redux/hook";
+import {  useAppDispatch, useAppSelector } from "@/redux/hook";
 import { CreatePost } from "./homepagecompo/Post/CreatePost";
 import { DropMenu } from "./DropdownMenu/DropMenu";
 import { Button } from "./ui/button";
@@ -8,7 +8,7 @@ import { useCurrentToken } from "@/redux/feature/auth/authslice";
 
 const NavbarUtills = () => {
     const user = useAppSelector(useCurrentToken)
-
+    const dispatch = useAppDispatch()
     return (
         <div>
              <nav>
@@ -16,7 +16,7 @@ const NavbarUtills = () => {
                    
            { user ? <div className=" lg:flex gap-2">
             <CreatePost/>
-            <DropMenu/>
+            <DropMenu dispatch={dispatch}/>
            </div>:
             <Button variant={'ghost'} size={"default"} className="uppercase" >
             <Link href={'/login'}

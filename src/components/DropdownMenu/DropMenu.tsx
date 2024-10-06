@@ -17,15 +17,14 @@ import logo from "@/asset/logo.png"
 import Image from "next/image"
 import Link from "next/link"
 import { useAppSelector } from "@/redux/hook"
-import { useCurrentUser } from "@/redux/feature/auth/authslice"
+import { logout, useCurrentUser } from "@/redux/feature/auth/authslice"
 import { useGetSingleUserQuery } from "@/redux/feature/auth/authApi"
-export function DropMenu() {
+export function DropMenu({dispatch}:{dispatch:any}) {
     const user: any = useAppSelector(useCurrentUser)
     const { data, isLoading } = useGetSingleUserQuery(user!.id!)
     if (isLoading) {
         return <Image src={logo} width={30} height={30} alt="users" />
     }
-
 
     return (
         <DropdownMenu>
@@ -41,8 +40,8 @@ export function DropMenu() {
                     <DropdownMenuRadioItem value="top">
                         <Link href={'/aboutus'}>Dashboard</Link>
                     </DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="top">
-                        <span>Logout</span>
+                    <DropdownMenuRadioItem value="top" >
+                      <Button variant={'ghost'} onClick={ () => dispatch(logout())}> Logout</Button>
                     </DropdownMenuRadioItem>
 
                 </DropdownMenuRadioGroup>

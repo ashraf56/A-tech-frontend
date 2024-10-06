@@ -74,7 +74,7 @@ const Login = () => {
                             {errors.password && <span className="text-sm text-red-700"> {errors.password?.message as string} </span>}
                         </div>
                         <div className="text-sm">
-                            <p>Dont have any account? <Link href={'/'}>Sign up now</Link></p>
+                            <p>Dont have any account? <Link href={'/signup'}>Sign up now</Link></p>
                         </div>
 
 
