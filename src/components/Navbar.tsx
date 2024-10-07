@@ -9,7 +9,7 @@ import { LayoutGridIcon } from "lucide-react";
 import NavbarUtills from "./NavbarUtills";
 
 const Navbar = () => {
-    
+
     return (
         <div>
             <header className="flex h-14 w-full shrink-0 items-center sticky top-0 z-30 px-4 md:px-6 border-b-2">
@@ -20,15 +20,15 @@ const Navbar = () => {
                     </div>
 
                 </Link>
-              
+
 
                 <nav className="ml-auto hidden lg:flex gap-6  ">
-                   
+
 
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
                         <Link href={'/'}
                         >
-                            Contact 
+                            Contact
                         </Link>
                     </Button>
 
@@ -40,12 +40,12 @@ const Navbar = () => {
                     </Button>
 
                     <div className="block">
-                    <NavbarUtills/>
+                        <NavbarUtills />
                     </div>
-                    
-                     <div className="hidden lg:block">
-                     <ModeToggle/>
-                     </div>
+
+                    <div className="hidden lg:block">
+                        <ModeToggle />
+                    </div>
 
 
 
@@ -59,7 +59,7 @@ const Navbar = () => {
                 <Sheet>
                     <SheetTrigger asChild >
                         <Button variant="outline" className="block lg:hidden ml-auto">
-                            <LayoutGridIcon className="w-5 h-5"/>
+                            <LayoutGridIcon className="w-5 h-5" />
                         </Button>
                     </SheetTrigger>
                     <SheetContent>
@@ -68,25 +68,27 @@ const Navbar = () => {
                                 <nav className="ml-auto flex flex-col gap-6 mt-5">
 
 
-                                <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
-                        >
-                            Contact 
-                        </Link>
-                    </Button>
+                                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                                        <Link href={'/'}
+                                        >
+                                            Contact
+                                        </Link>
+                                    </Button>
 
-                    <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
-                        >
-                            About us
-                        </Link>
-                    </Button>
+                                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                                        <Link href={'/'}
+                                        >
+                                            About us
+                                        </Link>
+                                    </Button>
 
-                   
-                    
-                   
-                     <ModeToggle/>
-                    
+                                    <div className="block">
+                                        <NavbarUtills />
+                                    </div>
+
+
+                                    <ModeToggle />
+
 
 
 
