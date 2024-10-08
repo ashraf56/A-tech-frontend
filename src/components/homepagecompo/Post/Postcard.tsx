@@ -23,7 +23,7 @@ const Postcard = ({data}:{data:any}) => {
                 </CardHeader>
                 <CardContent>
                     <CardTitle className="text-3xl py-2">
-                        <Link href={`/post-detail`}>{data?.title}</Link>
+                        <Link href={`/post-detail/${data._id}`}>{data?.title}</Link>
                     </CardTitle>
                     <p>{data?.subtitle}</p>
 

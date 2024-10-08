@@ -5,11 +5,13 @@ import { BiUpvote } from "react-icons/bi";
 import AddCooments from "./Comment/AddCooments";
 import { Separator } from "./ui/separator";
 import ViewallComment from "./Comment/ViewallComment";
-const PostDetail = () => {
+const PostDetail =async ({data}) => {
+    console.log(data);
+    
     return (
         <div className="w-full max-w-3xl container mx-auto">
             <div className="w-full h-full py-2">
-                <Image src={imgs} width={400} height={400} alt="blogs" className="w-full "></Image>
+                <Image src={data?.image} width={400} height={400} alt="blogs" className="w-full "></Image>
             </div>
 
             <div className="flex gap-2 items-center py-3">
@@ -17,7 +19,7 @@ const PostDetail = () => {
                     <Image src={logo} width={50} height={50} alt="img" className="rounded-full" ></Image>
                 </div>
                 <div >
-                    <div className="flex gap-3 items-center">  <h1 className="text-md font-bold">Your name . </h1>
+                    <div className="flex gap-3 items-center">  <h1 className="text-md font-bold">{data?.user?.name} . </h1>
 
                         <p className="text-green-400 text-sm">follow</p>
                     </div>

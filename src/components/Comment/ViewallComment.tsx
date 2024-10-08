@@ -3,7 +3,7 @@ import lgo from "@/asset/logo.png"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader } from "../ui/card";
 import { Button } from "../ui/button";
 
-const ViewallComment = () => {
+const ViewallComment = async() => {
     return (
         <div>
             <Card className="w-full  rounded-none mx-auto">
