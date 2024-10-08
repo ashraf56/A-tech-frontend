@@ -8,7 +8,8 @@ const PostApi = baseApi.injectEndpoints({
                 url: 'blogs/create-blog',
                 method: "POST",
                 body: data
-            })
+            }),
+            invalidatesTags: ['poSt']
         }),
     }),
 

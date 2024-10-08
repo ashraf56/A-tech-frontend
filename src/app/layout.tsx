@@ -34,9 +34,7 @@ export default function RootLayout({
         <StoreProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange>
+            defaultTheme="system">
 
             {children}
             <Toaster />
