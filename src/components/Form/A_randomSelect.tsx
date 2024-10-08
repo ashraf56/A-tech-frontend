@@ -2,7 +2,7 @@
 import { useFormContext } from "react-hook-form";
 import { Label } from "../ui/label";
 
-const A_select = ({ label, name, data }: any) => {
+const A_randomSelect = ({ label, name, data }: any) => {
     const { register } = useFormContext()
     return (
         <div className="flex flex-col space-y-1.5 w-full max-w-full ">
@@ -23,4 +23,4 @@ const A_select = ({ label, name, data }: any) => {
     );
 };
 
-export default A_select;
+export default A_randomSelect;
