@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 
 import Link from "next/link";
