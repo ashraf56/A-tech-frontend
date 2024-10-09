@@ -15,7 +15,7 @@ const Allpost = async () => {
            </div>
             <div className='grid grid-cols-1 gap-3'>
                 {
-                    data.data?.map((blog: any) => (
+                    data?.data?.map((blog: any) => (
 
                         <Postcard data={blog} key={blog?._id} />
                     ))
