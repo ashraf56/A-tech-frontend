@@ -63,8 +63,8 @@ const PostDetail =  ({ data }: any) => {
             <div>
              {  user && <AddComents blog={data} />}
             </div>
-
-            <div>
+            
+           { user ? <div>
                 <h1 className="font-bold pb-2">All comments</h1>
                 <div className=" grid grid-cols-1 gap-3 py-3">
                     { data?.comments?.length ===0 ?  'no comment available':   data?.comments?.reverse().map((c:any) => (
@@ -74,7 +74,7 @@ const PostDetail =  ({ data }: any) => {
 
                     }
                 </div>
-            </div>
+            </div> :  <p className="text-center uppercase font-bold text-lg">sign in to view all comments</p>}
 
         </div>
     );

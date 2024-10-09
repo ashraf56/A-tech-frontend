@@ -15,12 +15,10 @@ import { MdDelete } from "react-icons/md";
 const ViewallComment = ({ c, blogid }: any) => {
 
     const { data, isLoading } = useGetSingleUserQuery(c.userid)
+    
     const user: any = useAppSelector(useCurrentUser)
     const [deleteAcomment] = useDeleteAcommentMutation()
     const router = useRouter()
-    console.log(user.id);
-    console.log(c.userid);
-    console.log(c.userid === user.id);
 
     if (isLoading) {
         return <span> </span>
@@ -75,7 +73,7 @@ const ViewallComment = ({ c, blogid }: any) => {
 
 
                     <CardFooter className="justify-end">
-                        {c.userid === user!.id! ? <Button variant={'ghost'} onClick={() => handleDelete(c._id)}>
+                        {c.userid === user?.id ? <Button variant={'ghost'} onClick={() => handleDelete(c._id)}>
                             <MdDelete className="w-6 h-6" />
                         </Button>
                             : ''
