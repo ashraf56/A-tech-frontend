@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { ArrowBigUp } from "lucide-react";
+import { TiArrowUpThick } from "react-icons/ti";
 import { FaComment } from "react-icons/fa";
 import Link from "next/link";
 import moment from 'moment';
+import { Badge } from "@/components/ui/badge";
 const Postcard = ({data}:{data:any}) => {
     const Datetime = moment(data?.date).format('MMMM Do YYYY')
     return (
@@ -26,14 +27,18 @@ const Postcard = ({data}:{data:any}) => {
                         <Link href={`/post-detail/${data._id}`}>{data?.title}</Link>
                     </CardTitle>
                     <p>{data?.subtitle}</p>
-
+                      <div className="pt-3">
+                        <Badge variant={'outline'}>#{data?.category?.name}</Badge>
+                        <Badge variant={'outline'}>#{data?.blogType}</Badge>
+                      </div>
                     <CardDescription className="py-5 ">
-                        <Image src={data?.image} width={500} height={200} alt="postimg" className="w-full rounded-lg mx-auto" />
+                        <Image src={data?.image} width={1000} height={500} alt="postimg" className="w-full rounded-lg mx-auto" />
                     </CardDescription>
-                    <div className="flex gap-3 items-center">
+                    <hr />
+                    <div className="flex gap-3 items-center mt-5">
                         <div className="flex gap-1 items-center">
-                            <ArrowBigUp className="h-7 w-7 " />
-                            <span>200</span>
+                            <TiArrowUpThick className="h-7 w-7 " />
+                            <span>{data?.upvote}</span>
                         </div>
                         <div className="flex gap-2 items-center">
 

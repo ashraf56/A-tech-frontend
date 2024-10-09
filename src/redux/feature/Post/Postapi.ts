@@ -11,6 +11,22 @@ const PostApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ['poSt']
         }),
+        makeAcomment: build.mutation({
+            query: (data) => ({
+                url: `blogs/${data.id}`,
+                method: "PUT",
+                body: data.info
+            }),
+            invalidatesTags: ['poSt']
+        }),
+        deleteAcomment: build.mutation({
+            query: (data) => ({
+                url: `blogs/${data.id}`,
+                method: "DELETE",
+                body: data.info
+            }),
+            invalidatesTags: ['poSt']
+        })
     }),
 
 
@@ -19,5 +35,7 @@ const PostApi = baseApi.injectEndpoints({
 
 
 export const {
-useCreateAblogMutation
+useCreateAblogMutation,
+useMakeAcommentMutation,
+useDeleteAcommentMutation
 } = PostApi
