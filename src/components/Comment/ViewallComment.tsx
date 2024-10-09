@@ -8,12 +8,19 @@ import { useGetSingleUserQuery } from "@/redux/feature/auth/authApi";
 import { useDeleteAcommentMutation } from "@/redux/feature/Post/Postapi";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { useAppSelector } from "@/redux/hook";
+import { useCurrentUser } from "@/redux/feature/auth/authslice";
+import { MdDelete } from "react-icons/md";
 
 const ViewallComment = ({ c, blogid }: any) => {
 
     const { data, isLoading } = useGetSingleUserQuery(c.userid)
+    const user: any = useAppSelector(useCurrentUser)
     const [deleteAcomment] = useDeleteAcommentMutation()
     const router = useRouter()
+    console.log(user.id);
+    console.log(c.userid);
+    console.log(c.userid === user.id);
 
     if (isLoading) {
         return <span> </span>
@@ -68,9 +75,11 @@ const ViewallComment = ({ c, blogid }: any) => {
 
 
                     <CardFooter className="justify-end">
-                        <Button variant={'ghost'} onClick={() => handleDelete(c._id)}>
-                            del
+                        {c.userid === user!.id! ? <Button variant={'ghost'} onClick={() => handleDelete(c._id)}>
+                            <MdDelete className="w-6 h-6" />
                         </Button>
+                            : ''
+                        }
                     </CardFooter>
                 </CardContent>
             </Card>

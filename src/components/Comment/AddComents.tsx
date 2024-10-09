@@ -54,7 +54,7 @@ const AddComents = ({ blog }:any) => {
         <div className="w-full max-w-2xl  mx-auto ">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col gap-3 justify-center items-center">
-                    <Textarea placeholder="Search" {...register('content')} className="h-12" />
+                    <Textarea placeholder="write something" {...register('content')} className="h-12" />
                     <Button variant={'default'} type="submit"> Add comment</Button>
                 </div>
             </form>
