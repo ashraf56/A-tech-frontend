@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+'use client'
 import logo from "@/asset/logo.png"
 import Image from "next/image";
 import { BiUpvote } from "react-icons/bi";
@@ -7,8 +8,10 @@ import { Separator } from "./ui/separator";
 import ViewallComment from "./Comment/ViewallComment";
 import moment from "moment";
 import { Button } from "./ui/button";
-const PostDetail = async ({ data }: any) => {
-    
+import { useAppSelector } from "@/redux/hook";
+import { useCurrentUser } from "@/redux/feature/auth/authslice";
+const PostDetail =  ({ data }: any) => {
+    const user = useAppSelector(useCurrentUser)
 
     return (
         <div className="w-full max-w-3xl container mx-auto">
@@ -58,13 +61,13 @@ const PostDetail = async ({ data }: any) => {
             <Separator className="my-4" />
 
             <div>
-                <AddComents blog={data} />
+             {  user && <AddComents blog={data} />}
             </div>
 
             <div>
                 <h1 className="font-bold pb-2">All comments</h1>
-                <div className=" grid grid-cols-1 gap-3 ">
-                    {data?.comments?.reverse().map((c:any) => (
+                <div className=" grid grid-cols-1 gap-3 py-3">
+                    { data?.comments?.length ===0 ?  'no comment available':   data?.comments?.reverse().map((c:any) => (
                         // eslint-disable-next-line react/jsx-key
                         <ViewallComment c={c} key={c._id} blogid={data._id}/>
                     ))

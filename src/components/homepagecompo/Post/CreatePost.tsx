@@ -24,6 +24,7 @@ import { useAppSelector } from "@/redux/hook"
 import { useCurrentUser } from "@/redux/feature/auth/authslice"
 import { useCreateAblogMutation } from "@/redux/feature/Post/Postapi"
 import A_randomSelect from "@/components/Form/A_randomSelect"
+import { useRouter } from "next/navigation"
 
 
 const Blogtype = [
@@ -49,7 +50,7 @@ export function CreatePost() {
   const { data, isLoading } = useGetallCategoryQuery(undefined)
   const user: any = useAppSelector(useCurrentUser)
   const [CreateAblog, {  isLoading: isblogloading }] = useCreateAblogMutation()
-
+ const router = useRouter()
 
   if (isLoading) {
     return <p>loading...</p>
@@ -83,7 +84,7 @@ export function CreatePost() {
 
       if (res?.success === true) {
         toast.success(res?.message, { id: toast1, duration: 2000 });
-
+       router.refresh()
       }
 
 

@@ -31,8 +31,8 @@ const Postcard = ({data}:{data:any}) => {
                         <Badge variant={'outline'}>#{data?.category?.name}</Badge>
                         <Badge variant={'outline'}>#{data?.blogType}</Badge>
                       </div>
-                    <CardDescription className="py-5 ">
-                        <Image src={data?.image} width={1000} height={500} alt="postimg" className="w-full rounded-lg mx-auto" />
+                    <CardDescription className="py-5 h-full ">
+                        <Image src={data?.image} width={500} height={500} alt="postimg" className="w-full rounded-lg mx-auto h-52 object-cover " />
                     </CardDescription>
                     <hr />
                     <div className="flex gap-3 items-center mt-5">

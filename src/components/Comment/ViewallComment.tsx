@@ -66,7 +66,7 @@ const ViewallComment = ({ c, blogid }: any) => {
                 </CardHeader>
                 <CardContent>
 
-                    <div>
+                    <div className="px-10">
                         {c?.content}
                     </div>
 

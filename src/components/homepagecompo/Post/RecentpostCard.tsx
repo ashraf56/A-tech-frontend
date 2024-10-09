@@ -2,16 +2,16 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 
 import Link from "next/link";
 
-const RecentPostcard = () => {
+const RecentPostcard = ({rp}:any) => {
     return (
         <div>
             <Card className="w-full max-w-xl rounded-none h-24 mx-auto">
-                <CardContent>
-                    <CardTitle className="text-md py-2">
-                        <Link href={'/post-detail'}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,</Link>
+                <CardContent className="flex flex-col py-3">
+                    <CardTitle className="text-md ">
+                        <Link href={`/post-detail/${rp?._id}`}>{rp?.title}</Link>
                     </CardTitle>
                     <CardDescription>
-                       Jhon doe
+                       {rp?.user?.name}
                       
                     </CardDescription>
                    
