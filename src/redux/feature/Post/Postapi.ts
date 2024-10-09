@@ -23,7 +23,7 @@ const PostApi = baseApi.injectEndpoints({
             query: (data) => ({
                 url: `blogs/${data.id}`,
                 method: "DELETE",
-                body: data.info
+                body: data.commentid
             }),
             invalidatesTags: ['poSt']
         })

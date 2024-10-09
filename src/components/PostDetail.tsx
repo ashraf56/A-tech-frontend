@@ -64,9 +64,9 @@ const PostDetail = async ({ data }: any) => {
             <div>
                 <h1 className="font-bold pb-2">All comments</h1>
                 <div className=" grid grid-cols-1 gap-3 ">
-                    {data?.comments?.reverse().map((c) => (
+                    {data?.comments?.reverse().map((c:any) => (
                         // eslint-disable-next-line react/jsx-key
-                        <ViewallComment c={c} key={c._id}/>
+                        <ViewallComment c={c} key={c._id} blogid={data._id}/>
                     ))
 
                     }

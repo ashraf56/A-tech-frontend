@@ -8,7 +8,6 @@ const page = async ({ params }:{params:any}) => {
     const {id}= params 
    
     const data = await getSingleBlog(id)
-    console.log(data);
     
     return (
         <div className="mx-auto">

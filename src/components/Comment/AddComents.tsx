@@ -36,10 +36,11 @@ const AddComents = ({ blog }:any) => {
 
             if (res?.success === true) {
                 toast.success(res?.message, { id: toast1, duration: 2000 });
+                 router.refresh()
 
             }
 
-           router.refresh()
+          
            
 
         } catch (error) {
