@@ -26,7 +26,7 @@ const Navbar = () => {
 
 
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
+                        <Link href={'/contactus'}
                         >
                             Contact
                         </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
 
 
                                     <Button variant={'ghost'} size={"default"} className="uppercase" >
-                                        <Link href={'/'}
+                                        <Link href={'/contactus'}
                                         >
                                             Contact
                                         </Link>
