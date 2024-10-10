@@ -10,7 +10,7 @@ import moment from "moment";
 import { Button } from "./ui/button";
 import { useAppSelector } from "@/redux/hook";
 import { useCurrentUser } from "@/redux/feature/auth/authslice";
-const PostDetail =  ({ data }: any) => {
+const PostDetail = ({ data }: any) => {
     const user = useAppSelector(useCurrentUser)
 
     return (
@@ -61,20 +61,20 @@ const PostDetail =  ({ data }: any) => {
             <Separator className="my-4" />
 
             <div>
-             {  user && <AddComents blog={data} />}
+                {user && <AddComents blog={data} />}
             </div>
-            
-           { user ? <div>
+
+            {user ? <div>
                 <h1 className="font-bold pb-2">All comments</h1>
                 <div className=" grid grid-cols-1 gap-3 py-3">
-                    { data?.comments?.length ===0 ?  'no comment available':   data?.comments?.reverse().map((c:any) => (
+                    {data?.comments?.length === 0 ? 'no comment available' : data?.comments?.reverse().map((c: any) => (
                         // eslint-disable-next-line react/jsx-key
-                        <ViewallComment c={c} key={c._id} blogid={data._id}/>
+                        <ViewallComment c={c} key={c._id} blogid={data._id} />
                     ))
 
                     }
                 </div>
-            </div> :  <p className="text-center uppercase font-bold text-lg">sign in to view all comments</p>}
+            </div> : <p className="text-center uppercase font-bold text-lg">sign in to view all comments</p>}
 
         </div>
     );

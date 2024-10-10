@@ -15,7 +15,7 @@ import { MdDelete } from "react-icons/md";
 const ViewallComment = ({ c, blogid }: any) => {
 
     const { data, isLoading } = useGetSingleUserQuery(c.userid)
-    
+
     const user: any = useAppSelector(useCurrentUser)
     const [deleteAcomment] = useDeleteAcommentMutation()
     const router = useRouter()

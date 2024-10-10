@@ -10,9 +10,9 @@ const Allpost = async () => {
 
     return (
         <div className='w-full lg:w-3/4 h-full flex flex-col space-y-3'>
-           <div className='my-4'>
-           <SearchFeild />
-           </div>
+            <div className='my-4'>
+                <SearchFeild />
+            </div>
             <div className='grid grid-cols-1 gap-3'>
                 {
                     data?.data?.map((blog: any) => (

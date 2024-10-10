@@ -18,6 +18,6 @@ export default function StoreProvider({
         storeRef.current = makeStore()
         persistorRef.current = persistStore(storeRef.current);
     }
-   
+
     return <Provider store={storeRef.current}> <PersistGate loading={null} persistor={persistorRef.current}>{children}</PersistGate>  </Provider>
 }

@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 
 import Link from "next/link";
 
-const RecentPostcard = ({rp}:any) => {
+const RecentPostcard = ({ rp }: any) => {
     return (
         <div>
             <Card className="w-full max-w-xl rounded-none  mx-auto">
@@ -12,10 +12,10 @@ const RecentPostcard = ({rp}:any) => {
                         <Link href={`/post-detail/${rp?._id}`}>{rp?.title}</Link>
                     </CardTitle>
                     <CardDescription>
-                       {rp?.user?.name}
-                      
+                        {rp?.user?.name}
+
                     </CardDescription>
-                   
+
                 </CardContent>
             </Card>
         </div>

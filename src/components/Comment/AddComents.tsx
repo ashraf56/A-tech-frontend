@@ -9,25 +9,28 @@ import { useAppSelector } from "@/redux/hook";
 import { useCurrentUser } from "@/redux/feature/auth/authslice";
 import { useRouter } from "next/navigation";
 
-const AddComents = ({ blog }:any) => {
+const AddComents = ({ blog }: any) => {
     const {
         register,
         handleSubmit,
+        reset
     } = useForm()
     const user: any = useAppSelector(useCurrentUser)
-  const router = useRouter()
+    const router = useRouter()
     const [makeAcomment] = useMakeAcommentMutation()
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
         const commentData = {
             id: blog._id,
-            info: 
-              {  userid: user?.id,
-                content: data.content }
-            
+            info:
+            {
+                userid: user?.id,
+                content: data.content
+            }
+
 
         }
-       
-        
+
+
 
         const toast1 = toast.loading('loading...', { duration: 2000 })
         try {
@@ -36,16 +39,16 @@ const AddComents = ({ blog }:any) => {
 
             if (res?.success === true) {
                 toast.success(res?.message, { id: toast1, duration: 2000 });
-                 router.refresh()
-
+                router.refresh()
+                reset()
             }
 
-          
-           
+
+
 
         } catch (error) {
             console.log(error);
-            
+
             toast.error('faild', { id: toast1, duration: 2000 });
         }
     }

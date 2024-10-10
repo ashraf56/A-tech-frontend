@@ -71,7 +71,7 @@ const Signup = () => {
 
                         <div className="flex flex-col space-y-1.5 w-full max-w-full">
                             <Label htmlFor="name">Name</Label>
-                            <Input  type="text" placeholder="your name" {...register('name', {
+                            <Input type="text" placeholder="your name" {...register('name', {
                                 required: true
                             })} />
                             {errors.name && <span className="text-sm text-red-700">

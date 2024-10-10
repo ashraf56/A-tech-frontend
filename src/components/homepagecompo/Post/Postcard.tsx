@@ -6,7 +6,7 @@ import { FaComment } from "react-icons/fa";
 import Link from "next/link";
 import moment from 'moment';
 import { Badge } from "@/components/ui/badge";
-const Postcard = ({data}:{data:any}) => {
+const Postcard = ({ data }: { data: any }) => {
     const Datetime = moment(data?.date).format('MMMM Do YYYY')
     return (
         <div>
@@ -27,10 +27,10 @@ const Postcard = ({data}:{data:any}) => {
                         <Link href={`/post-detail/${data._id}`}>{data?.title}</Link>
                     </CardTitle>
                     <p>{data?.subtitle}</p>
-                      <div className="pt-3">
+                    <div className="pt-3">
                         <Badge variant={'outline'}>#{data?.category?.name}</Badge>
                         <Badge variant={'outline'}>#{data?.blogType}</Badge>
-                      </div>
+                    </div>
                     <CardDescription className="py-5 h-full ">
                         <Image src={data?.image} width={500} height={500} alt="postimg" className="w-full rounded-lg mx-auto h-52 object-cover " />
                     </CardDescription>

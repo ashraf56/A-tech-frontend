@@ -1,5 +1,5 @@
 'use client'
-import {  useAppDispatch, useAppSelector } from "@/redux/hook";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { CreatePost } from "./homepagecompo/Post/CreatePost";
 import { DropMenu } from "./DropdownMenu/DropMenu";
 import { Button } from "./ui/button";
@@ -11,23 +11,23 @@ const NavbarUtills = () => {
     const dispatch = useAppDispatch()
     return (
         <div>
-             <nav>
-                
-                   
-           { user ? <div className=" lg:flex gap-2">
-            <CreatePost/>
-            <DropMenu dispatch={dispatch}/>
-           </div>:
-            <Button variant={'ghost'} size={"default"} className="uppercase" >
-            <Link href={'/login'}
-            >
-                Login
-            </Link>
-        </Button>
-           }
+            <nav>
 
 
-                </nav>   
+                {user ? <div className=" lg:flex gap-2">
+                    <CreatePost />
+                    <DropMenu dispatch={dispatch} />
+                </div> :
+                    <Button variant={'ghost'} size={"default"} className="uppercase" >
+                        <Link href={'/login'}
+                        >
+                            Login
+                        </Link>
+                    </Button>
+                }
+
+
+            </nav>
         </div>
     );
 };

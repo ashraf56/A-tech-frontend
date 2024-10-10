@@ -1,6 +1,6 @@
-export const CloudinaryStore = async (file: string | Blob)=>{
+export const CloudinaryStore = async (file: string | Blob) => {
     const formData = new FormData();
-    
+
     formData.append('file', file);
 
     const my_upload_preset = process.env.NEXT_PUBLIC_Preset_name

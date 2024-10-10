@@ -5,8 +5,8 @@ import React from 'react';
 const page = () => {
     return (
         <div className=' md:flex gap-2 '>
-           <Allpost/>
-            <RecentPost/>
+            <Allpost />
+            <RecentPost />
         </div>
     );
 };

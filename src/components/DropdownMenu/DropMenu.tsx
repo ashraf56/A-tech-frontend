@@ -19,7 +19,7 @@ import Link from "next/link"
 import { useAppSelector } from "@/redux/hook"
 import { logout, useCurrentUser } from "@/redux/feature/auth/authslice"
 import { useGetSingleUserQuery } from "@/redux/feature/auth/authApi"
-export function DropMenu({dispatch}:{dispatch:any}) {
+export function DropMenu({ dispatch }: { dispatch: any }) {
     const user: any = useAppSelector(useCurrentUser)
     const { data, isLoading } = useGetSingleUserQuery(user!.id!)
     if (isLoading) {
@@ -41,7 +41,7 @@ export function DropMenu({dispatch}:{dispatch:any}) {
                         <Link href={'/aboutus'}>Dashboard</Link>
                     </DropdownMenuRadioItem>
                     <DropdownMenuRadioItem value="top" >
-                      <Button variant={'ghost'} onClick={ () => dispatch(logout())}> Logout</Button>
+                        <Button variant={'ghost'} onClick={() => dispatch(logout())}> Logout</Button>
                     </DropdownMenuRadioItem>
 
                 </DropdownMenuRadioGroup>

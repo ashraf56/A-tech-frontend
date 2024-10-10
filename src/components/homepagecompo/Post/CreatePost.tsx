@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
 import { useGetallCategoryQuery } from "@/redux/feature/category/categoryAPi"
-import { FieldValues, SubmitHandler} from "react-hook-form"
+import { FieldValues, SubmitHandler } from "react-hook-form"
 import { useState } from "react"
 import { toast } from "sonner"
 import { CloudinaryStore } from "@/lib/ClaoudinaryStore"
@@ -49,8 +49,8 @@ export function CreatePost() {
   const [editorContent, setEditorContent] = useState('');
   const { data, isLoading } = useGetallCategoryQuery(undefined)
   const user: any = useAppSelector(useCurrentUser)
-  const [CreateAblog, {  isLoading: isblogloading }] = useCreateAblogMutation()
- const router = useRouter()
+  const [CreateAblog, { isLoading: isblogloading }] = useCreateAblogMutation()
+  const router = useRouter()
 
   if (isLoading) {
     return <p>loading...</p>
@@ -84,14 +84,14 @@ export function CreatePost() {
 
       if (res?.success === true) {
         toast.success(res?.message, { id: toast1, duration: 2000 });
-       router.refresh()
+        router.refresh()
       }
 
 
 
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error:any) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error: any) {
       toast.error('Something error', { id: toast1, duration: 2000 });
     }
 
