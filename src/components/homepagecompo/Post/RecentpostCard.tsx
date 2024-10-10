@@ -6,9 +6,9 @@ import Link from "next/link";
 const RecentPostcard = ({rp}:any) => {
     return (
         <div>
-            <Card className="w-full max-w-xl rounded-none h-24 mx-auto">
+            <Card className="w-full max-w-xl rounded-none  mx-auto">
                 <CardContent className="flex flex-col py-3">
-                    <CardTitle className="text-md ">
+                    <CardTitle className="text-sm ">
                         <Link href={`/post-detail/${rp?._id}`}>{rp?.title}</Link>
                     </CardTitle>
                     <CardDescription>
