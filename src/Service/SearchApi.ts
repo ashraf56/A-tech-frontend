@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 export const SearchApi = async (searchTerm:any)=>{
     const serverAPi = process.env.NEXT_PUBLIC_serverApi
   try {
