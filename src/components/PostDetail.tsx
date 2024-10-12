@@ -10,9 +10,24 @@ import moment from "moment";
 import { Button } from "./ui/button";
 import { useAppSelector } from "@/redux/hook";
 import { useCurrentUser } from "@/redux/feature/auth/authslice";
+import { useRouter } from "next/navigation";
+import setUpvote from "@/Service/setUpvote";
 const PostDetail = ({ data }: any) => {
     const user = useAppSelector(useCurrentUser)
+    const router = useRouter()
+    const handleUpvote = async (id: string) => {
+        try {
+            const res = await setUpvote(id)
+            if (res?.success == true) {
+                console.log(res);
+                 router.refresh()
+             
+            }
+        } catch (error) {
+            console.log(error);
 
+        }
+    }
     return (
         <div className="w-full max-w-3xl container mx-auto">
             <div className="w-full h-full py-2">
@@ -46,7 +61,9 @@ const PostDetail = ({ data }: any) => {
             <div className="flex gap-3 items-center justify-between py-3 h-24 ">
                 <div className="flex items-center gap-1 ">
 
-                    <Button variant={'ghost'} size={'sm'}> <BiUpvote className="w-6 h-6 " />  </Button>
+                   { user ? <Button variant={'ghost'} size={'sm'} onClick={() => handleUpvote(data?._id)}> <BiUpvote className="w-6 h-6 " />  </Button> : 
+                   <Button variant={'ghost'} size={'sm'} > <BiUpvote className="w-6 h-6 " />  </Button>
+                   }
                     <p className="text-xl">{data?.upvote}</p>
 
                 </div>

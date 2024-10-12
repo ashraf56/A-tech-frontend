@@ -14,7 +14,7 @@ const page = async ({ params }:{params:any}) => {
             <div className="py-5 px-5">
            <Link href={'/'}> <HomeIcon className="w-5 h-5"/> </Link>
         </div>
-           <PostDetail data={data.data}/>
+           <PostDetail data={data?.data}/>
         </div>
     );
 };

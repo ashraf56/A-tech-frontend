@@ -3,6 +3,7 @@ import RecentPost from '@/components/homepagecompo/RecentPost';
 import React from 'react';
 
 const page = () => {
+  
     return (
         <div className=' md:flex gap-2 '>
             <Allpost />

@@ -19,6 +19,13 @@ const PostApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ['poSt']
         }),
+        addUpvote: build.mutation({
+            query: (id) => ({
+                url: `blogs/${id}/upvote`,
+                method: "PATCH",
+            }),
+            invalidatesTags: ['poSt']
+        }),
         deleteAcomment: build.mutation({
             query: (data) => ({
                 url: `blogs/${data.id}`,
@@ -26,6 +33,14 @@ const PostApi = baseApi.injectEndpoints({
                 body: data.commentid
             }),
             invalidatesTags: ['poSt']
+        }),
+        Searchitems: build.query({
+            query: (data) => ({
+                url: `blogs?searchTerm=${data}`,
+                method: "GET"
+               
+            }),
+            providesTags: ['poSt']
         })
     }),
 
@@ -37,5 +52,8 @@ const PostApi = baseApi.injectEndpoints({
 export const {
 useCreateAblogMutation,
 useMakeAcommentMutation,
-useDeleteAcommentMutation
+useDeleteAcommentMutation,
+useSearchitemsQuery,
+useAddUpvoteMutation
+
 } = PostApi
