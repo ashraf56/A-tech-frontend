@@ -88,7 +88,7 @@ const Allpost = () => {
                     )))
                     :
                     (
-                        'no POst found'
+                        'No Post Found'
                     )
                 }
             </div>
