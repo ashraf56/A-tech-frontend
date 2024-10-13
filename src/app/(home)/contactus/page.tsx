@@ -27,7 +27,6 @@ const page = () => {
         <div className="container   mx-auto my-10">
 
             <h1 className="uppercase text-center  text-3xl font-bold ">Get In touch</h1>
-            <p className="text-center text-sm font-light pb-2  uppercase tracking-[0.2em]">Contuct us</p>
 
             {/* here is  google map */}
             <div className=" block lg:flex   justify-center items-center mx-auto">

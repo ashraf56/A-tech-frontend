@@ -34,14 +34,14 @@ export function DropMenu({ dispatch }: { dispatch: any }) {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+                <DropdownMenuLabel>Panel</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuRadioGroup >
                     <DropdownMenuRadioItem value="top">
-                        <Link href={'/aboutus'}>Dashboard</Link>
+                        <Link href={'/dashboard'}>Dashboard</Link>
                     </DropdownMenuRadioItem>
                     <DropdownMenuRadioItem value="top" >
-                        <Button variant={'ghost'} onClick={() => dispatch(logout())}> Logout</Button>
+                        <span  onClick={() => dispatch(logout())}> Logout</span>
                     </DropdownMenuRadioItem>
 
                 </DropdownMenuRadioGroup>

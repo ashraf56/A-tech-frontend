@@ -33,7 +33,7 @@ const Navbar = () => {
                     </Button>
 
                     <Button variant={'ghost'} size={"default"} className="uppercase" >
-                        <Link href={'/'}
+                        <Link href={'/aboutus'}
                         >
                             About us
                         </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
                                     </Button>
 
                                     <Button variant={'ghost'} size={"default"} className="uppercase" >
-                                        <Link href={'/'}
+                                        <Link href={'/aboutus'}
                                         >
                                             About us
                                         </Link>

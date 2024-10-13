@@ -34,11 +34,10 @@ const PostApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ['poSt']
         }),
-        Searchitems: build.query({
-            query: (data) => ({
-                url: `blogs?searchTerm=${data}`,
-                method: "GET"
-               
+        getMyblogs: build.query({
+            query: () => ({
+                url: '/blogs/my-blogs' ,
+                method: "GET"    
             }),
             providesTags: ['poSt']
         })
@@ -53,7 +52,8 @@ export const {
 useCreateAblogMutation,
 useMakeAcommentMutation,
 useDeleteAcommentMutation,
-useSearchitemsQuery,
-useAddUpvoteMutation
+useAddUpvoteMutation,
+useGetMyblogsQuery
+
 
 } = PostApi
