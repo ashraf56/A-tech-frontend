@@ -41,30 +41,30 @@ const UsersProfile = () => {
                     <CardDescription className="flex gap-2 items-center"><FaRegAddressBook className="w-5 h-5 " /> {data?.data?.address}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    {  user.role === 'user' && <>
+                    {user.role === 'user' && <>
                         <div className="block lg:flex gap-2 justify-center ">
-                        <Card className="rounded-none w-96 h-32 md:h-52 text-center items-center flex flex-col justify-center hover:bg-sky-100 transition-all duration-300 ">
-                            <div className="flex gap-1 justify-center items-center">
-                                <p>Total Post</p>
-                            </div>
-                            <p className="font-CustomFont text-5xl font-bold  ">{myblogs?.data?.length}</p>
-                        </Card>
-                        <Card className="rounded-none w-96 h-32 md:h-52 text-center items-center flex flex-col justify-center hover:bg-sky-100 transition-all duration-300 ">
-                            <div className="flex gap-1 justify-center items-center">
-                                <p>Total Follwers</p>
-                            </div>
-                            <p className="font-CustomFont text-5xl font-bold  ">0</p>
-                        </Card>
-                    </div>
-                    <div>
-                        <h1 className="font-bold text-2xl  uppercase py-2">Recent Posts</h1>
-                        <div className="grid grid-cols-1 gap-2">
-                            {myblogs?.data?.map((b: { _id: any; }) => (
-                                <RecentPostcard rp={b} key={b._id} />
-                            ))}
+                            <Card className="rounded-none w-96 h-32 md:h-52 text-center items-center flex flex-col justify-center hover:bg-sky-100 transition-all duration-300 ">
+                                <div className="flex gap-1 justify-center items-center">
+                                    <p>Total Post</p>
+                                </div>
+                                <p className="font-CustomFont text-5xl font-bold  ">{myblogs?.data?.length}</p>
+                            </Card>
+                            <Card className="rounded-none w-96 h-32 md:h-52 text-center items-center flex flex-col justify-center hover:bg-sky-100 transition-all duration-300 ">
+                                <div className="flex gap-1 justify-center items-center">
+                                    <p>Total Follwers</p>
+                                </div>
+                                <p className="font-CustomFont text-5xl font-bold  ">0</p>
+                            </Card>
                         </div>
-                    </div></>
-}
+                        <div>
+                            <h1 className="font-bold text-2xl  uppercase py-2">Recent Posts</h1>
+                            <div className="grid grid-cols-1 gap-2">
+                                {myblogs?.data?.map((b: { _id: any; }) => (
+                                    <RecentPostcard rp={b} key={b._id} />
+                                ))}
+                            </div>
+                        </div></>
+                    }
                 </CardContent>
 
 

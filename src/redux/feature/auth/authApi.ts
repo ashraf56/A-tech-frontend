@@ -17,7 +17,7 @@ const authApi = baseApi.injectEndpoints({
                 body: data
             })
         }),
-    
+
         getUpdateUserInfo: build.mutation({
             query: (data) => ({
                 url: `auth/${data.id}`,
@@ -26,7 +26,7 @@ const authApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ['auth']
         }),
-       
+
         getSingleUser: build.query({
             query: (id) => ({
                 url: `auth/${id}`,
@@ -55,5 +55,5 @@ export const {
     useGetSingleUserQuery
     , useGetUpdateUserInfoMutation,
     useGetAllUsersQuery
-   
+
 } = authApi

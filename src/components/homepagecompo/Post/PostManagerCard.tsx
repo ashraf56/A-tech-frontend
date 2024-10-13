@@ -16,10 +16,10 @@ const PostManagerCard = ({ p }: any) => {
                         {p?.user?.name}
 
                     </CardDescription>
-               
+
                 </CardContent>
-                 <CardFooter className="justify-end flex gap-3 items-center ">
-                    <Edit2Icon  className=" w-5 h-5 "/>
+                <CardFooter className="justify-end flex gap-3 items-center ">
+                    <Edit2Icon className=" w-5 h-5 " />
                     <DeleteIcon className="text-red-500 w-6 h-6 " />
                 </CardFooter>
             </Card>

@@ -20,8 +20,8 @@ const PostDetail = ({ data }: any) => {
             const res = await setUpvote(id)
             if (res?.success == true) {
                 console.log(res);
-                 router.refresh()
-             
+                router.refresh()
+
             }
         } catch (error) {
             console.log(error);
@@ -61,9 +61,9 @@ const PostDetail = ({ data }: any) => {
             <div className="flex gap-3 items-center justify-between py-3 h-24 ">
                 <div className="flex items-center gap-1 ">
 
-                   { user ? <Button variant={'ghost'} size={'sm'} onClick={() => handleUpvote(data?._id)}> <BiUpvote className="w-6 h-6 " />  </Button> : 
-                   <Button variant={'ghost'} size={'sm'} > <BiUpvote className="w-6 h-6 " />  </Button>
-                   }
+                    {user ? <Button variant={'ghost'} size={'sm'} onClick={() => handleUpvote(data?._id)}> <BiUpvote className="w-6 h-6 " />  </Button> :
+                        <Button variant={'ghost'} size={'sm'} > <BiUpvote className="w-6 h-6 " />  </Button>
+                    }
                     <p className="text-xl">{data?.upvote}</p>
 
                 </div>

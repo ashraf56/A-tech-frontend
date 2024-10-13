@@ -36,8 +36,8 @@ const PostApi = baseApi.injectEndpoints({
         }),
         getMyblogs: build.query({
             query: () => ({
-                url: '/blogs/my-blogs' ,
-                method: "GET"    
+                url: '/blogs/my-blogs',
+                method: "GET"
             }),
             providesTags: ['poSt']
         })
@@ -49,11 +49,11 @@ const PostApi = baseApi.injectEndpoints({
 
 
 export const {
-useCreateAblogMutation,
-useMakeAcommentMutation,
-useDeleteAcommentMutation,
-useAddUpvoteMutation,
-useGetMyblogsQuery
+    useCreateAblogMutation,
+    useMakeAcommentMutation,
+    useDeleteAcommentMutation,
+    useAddUpvoteMutation,
+    useGetMyblogsQuery
 
 
 } = PostApi

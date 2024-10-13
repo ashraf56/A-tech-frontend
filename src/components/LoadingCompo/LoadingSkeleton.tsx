@@ -4,8 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
 
 const LoadingSkeleton = () => {
     return (
-      <>
-      
+        <>
+
             <Card className="w-full max-w-3xl rounded-2xl mx-auto">
                 <CardHeader>
                     <div className="flex gap-2 items-center">
@@ -43,7 +43,7 @@ const LoadingSkeleton = () => {
                     </div>
                 </CardContent>
             </Card>
-            </>
+        </>
     );
 };
 

@@ -1,13 +1,13 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
 
-const layout = ({children}:{
+const layout = ({ children }: {
     children: React.ReactNode;
-  }) => {
+}) => {
     return (
         <div className="flex gap-2">
-            <Sidebar/>
+            <Sidebar />
             <div className="w-full">
-            {children}
+                {children}
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ const page = () => {
             <div>
                 <h1 className='uppercase text-xl font-bold text-center'>Post manager</h1>
             </div>
-            <Postmanager/>
+            <Postmanager />
         </div>
     );
 };

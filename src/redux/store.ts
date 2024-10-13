@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {
-     FLUSH,
+    FLUSH,
     REHYDRATE,
     PAUSE,
     PERSIST,
     PURGE,
     REGISTER,
     persistReducer,
-  
+
 } from "redux-persist";
 import storage from 'redux-persist/lib/storage';
 import { baseApi } from './baseApi/baseApi';

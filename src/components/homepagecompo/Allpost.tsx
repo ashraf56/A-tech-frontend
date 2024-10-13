@@ -19,7 +19,7 @@ const Allpost = () => {
 
 
     const [results, setResults] = useState([]);
-  
+
 
 
     useEffect(() => {
@@ -39,7 +39,7 @@ const Allpost = () => {
 
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
         const searchTerm = data.search.trim().split(" ").join("+");
-       
+
 
         if (searchTerm) {
             try {
@@ -53,7 +53,7 @@ const Allpost = () => {
             const response = await getAllBlog();
 
             setResults(response?.data);
-           
+
         }
 
     }
@@ -81,16 +81,16 @@ const Allpost = () => {
                 </div>
             </div>
             <div className='grid grid-cols-1 gap-3'>
-                { results?.length === 0 ? <LoadingSkeleton></LoadingSkeleton> 
-                : results?.length > 0 ?
-                    (results?.reverse().map((blog: any) => (
+                {results?.length === 0 ? <LoadingSkeleton></LoadingSkeleton>
+                    : results?.length > 0 ?
+                        (results?.reverse().map((blog: any) => (
 
-                        <Postcard data={blog} key={blog?._id} />
-                    )))
-                    : 
-                    (
-                       <p className='text-center pt-5 h-screen'>No Post Available</p>
-                    )
+                            <Postcard data={blog} key={blog?._id} />
+                        )))
+                        :
+                        (
+                            <p className='text-center pt-5 h-screen'>No Post Available</p>
+                        )
                 }
             </div>
 

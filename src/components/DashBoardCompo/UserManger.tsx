@@ -6,9 +6,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Button } from '../ui/button';
 
 const UserManger = () => {
-    const {data} = useGetAllUsersQuery(undefined,{pollingInterval:3000})
-    return (
-      <div className="mx-auto flex flex-col justify-center items-center container my-6  font-CustomFont">
+  const { data } = useGetAllUsersQuery(undefined, { pollingInterval: 3000 })
+  return (
+    <div className="mx-auto flex flex-col justify-center items-center container my-6  font-CustomFont">
       <div className="pb-5" >
         <h1 className='text-3xl font-bold'>Manage Users</h1>
       </div>
@@ -21,7 +21,7 @@ const UserManger = () => {
               <TableHead className="">Email</TableHead>
               <TableHead className="">Address</TableHead>
               <TableHead className="">Action</TableHead>
-            
+
             </TableRow>
           </TableHeader>
           <TableBody className="-z-30">
@@ -34,14 +34,14 @@ const UserManger = () => {
                 <TableCell className="font-medium">
                   <Button variant={'ghost'}>Block User</Button>
                 </TableCell>
-                
+
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </div>
     </div>
-    );
+  );
 };
 
 export default UserManger;

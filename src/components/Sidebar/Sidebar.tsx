@@ -23,9 +23,9 @@ const Sidebar = () => {
 
 
             <div className={` gap-2 items-center justify-center flex flex-col`}>
-              <div onClick={() => setOpen(!open)}>
-              <Image src={img} width={100} height={100} alt="profile"  />
-              </div>
+                <div onClick={() => setOpen(!open)}>
+                    <Image src={img} width={100} height={100} alt="profile" />
+                </div>
                 <div onClick={() => setOpen(!open)} className={`${!open && 'lg:hidden'} hidden lg:block`}><h1 className={` font-CustomFont font-extrabold `}>Tech</h1></div>
             </div>
 
@@ -39,7 +39,7 @@ const Sidebar = () => {
                                 <Link href={`${r.value}`} className=' flex gap-2 items-center '>
                                     <span className="w-6"
                                     >
-  <FaRandom className="w-6 h-6 "/>
+                                        <FaRandom className="w-6 h-6 " />
                                     </span>
                                     <span className={`${!open && 'lg:hidden'} hidden lg:block  text-sm`}> {r.name}</span>
                                 </Link>
@@ -52,7 +52,7 @@ const Sidebar = () => {
                                 <Link href={`${r.value}`} className=' flex gap-2 items-center '>
                                     <span className="w-6"
                                     >
-                                        <FaRandom className="w-6 h-6 "/>
+                                        <FaRandom className="w-6 h-6 " />
                                     </span>
                                     <span className={`${!open && 'lg:hidden'} hidden lg:block  text-sm`}> {r.name}</span>
                                 </Link>
