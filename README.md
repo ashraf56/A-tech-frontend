@@ -29,7 +29,7 @@ Welcome to the A-Tech Blog Frontend repository! This project forms the client-si
 password: 1234
 ```
 ## Live Link :
- https://a-motors-frontend.vercel.app/
+https://a-tech-frontend.vercel.app/
 
 ## Server code link: 
 https://github.com/ashraf56/A-tech-backend.git
